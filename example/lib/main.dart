@@ -1,4 +1,5 @@
-import 'package:carousel/carousel.dart';
+import 'package:customizable_carousel/customizable_carousel.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -32,7 +33,6 @@ class HomePage extends StatelessWidget {
           children: [
             const Text('Text 1'),
             Carousel(
-              showPages: true,
               items: [
                 CarouselItem(
                   image: Image.network(
@@ -40,7 +40,9 @@ class HomePage extends StatelessWidget {
                   ),
                   label: 'Image 1',
                   onTap: () {
-                    print('1');
+                    if (kDebugMode) {
+                      print('1');
+                    }
                   },
                 ),
                 CarouselItem(
@@ -48,7 +50,9 @@ class HomePage extends StatelessWidget {
                     'https://www.gstatic.com/webp/gallery/2.jpg',
                   ),
                   onTap: () {
-                    print('2');
+                    if (kDebugMode) {
+                      print('2');
+                    }
                   },
                 ),
                 CarouselItem(
@@ -56,7 +60,9 @@ class HomePage extends StatelessWidget {
                     'https://www.gstatic.com/webp/gallery/3.jpg',
                   ),
                   onTap: () {
-                    print('3');
+                    if (kDebugMode) {
+                      print('3');
+                    }
                   },
                   label: 'Image 3',
                 ),

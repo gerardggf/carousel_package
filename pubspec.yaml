@@ -1,7 +1,7 @@
-name: carousel
-description: A new Flutter package project.
+name: customizable_carousel
+description: Customizable carousel
 version: 0.0.1
-homepage:
+homepage: https://github.com/gerardggf/carousel_package
 
 environment:
   sdk: '>=2.18.6 <3.0.0'

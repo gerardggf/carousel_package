@@ -11,29 +11,92 @@ and the Flutter guide for
 [developing packages and plugins](https://flutter.dev/developing-packages).
 -->
 
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+Customizable carousel to be able to slide between images, see information about them and be able to carry out an action by clicking on them.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+The parameters that can be passed to the Carousel Widget are the following:
+(double) height: Widget height.
+(bool) showPages: Defines whether or not to show a chip with the current page number and the total number of pages.
+(Color) chipColor: Defines the color of the chip that contains texts.
+(Color) arrowColor: Defines the color of the side arrows to change from one image to another.
+(Color) textColor: Defiens the color of the texts.
+(BoxFit) fit: Defines how you want to fit the image within the available space of the widget.
+(ScrollPhysics) physics: Define the type of physics you want to apply when moving between images.
+(bool) canSwipe: Defines if the screen can be swiped or if can only be moved using the side arrows buttons.
+(TextStyle?) textStyle: Defines the text format of the page number and label chips.
+(List<CarouselItem>) items: Only mandatory parameter, to which at least one instance of the CarouselItem class must be passed.
+
+Within the CarrouselItem class you can pass the following parameters:
+(Image) image: Image to be displayed.
+(String?) label: Short description that can be added to the image.
+(VoidCallback?) onTap: Function to be performed if the displayed image is clicked.
 
 ## Getting started
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Install the package using the command in the Installing section and it can now be used.
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+an example of the application can be found in the `/example` folder.
 
 ```dart
-const like = 'sample';
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(),
+      body: SafeArea(
+        child: Column(
+          children: [
+            const Text('Text 1'),
+            Carousel(
+              items: [
+                CarouselItem(
+                  image: Image.network(
+                    'https://www.gstatic.com/webp/gallery/1.jpg',
+                  ),
+                  label: 'Image 1',
+                  onTap: () {
+                    if (kDebugMode) {
+                      print('1');
+                    }
+                  },
+                ),
+                CarouselItem(
+                  image: Image.network(
+                    'https://www.gstatic.com/webp/gallery/2.jpg',
+                  ),
+                  onTap: () {
+                    if (kDebugMode) {
+                      print('2');
+                    }
+                  },
+                ),
+                CarouselItem(
+                  image: Image.network(
+                    'https://www.gstatic.com/webp/gallery/3.jpg',
+                  ),
+                  onTap: () {
+                    if (kDebugMode) {
+                      print('3');
+                    }
+                  },
+                  label: 'Image 3',
+                ),
+              ],
+            ),
+            const Text('Text 2'),
+          ],
+        ),
+      ),
+    );
+  }
+}
 ```
 
 ## Additional information
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+For more information please contact me by email: gerard.ggf@gmail.com
