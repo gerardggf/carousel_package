@@ -30,17 +30,39 @@ class HomePage extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: [
-            const Text('hola1'),
+            const Text('Text 1'),
             Carousel(
-              height: 200,
-              images: [
-                Image.network('https://www.gstatic.com/webp/gallery/1.jpg'),
-                Image.network('https://www.gstatic.com/webp/gallery/2.jpg'),
-                Image.network('https://www.gstatic.com/webp/gallery/3.jpg'),
+              showPages: true,
+              items: [
+                CarouselItem(
+                  image: Image.network(
+                    'https://www.gstatic.com/webp/gallery/1.jpg',
+                  ),
+                  label: 'Image 1',
+                  onTap: () {
+                    print('1');
+                  },
+                ),
+                CarouselItem(
+                  image: Image.network(
+                    'https://www.gstatic.com/webp/gallery/2.jpg',
+                  ),
+                  onTap: () {
+                    print('2');
+                  },
+                ),
+                CarouselItem(
+                  image: Image.network(
+                    'https://www.gstatic.com/webp/gallery/3.jpg',
+                  ),
+                  onTap: () {
+                    print('3');
+                  },
+                  label: 'Image 3',
+                ),
               ],
-              label: ['holaa', null, null],
             ),
-            const Text('hola2'),
+            const Text('Text 2'),
           ],
         ),
       ),
