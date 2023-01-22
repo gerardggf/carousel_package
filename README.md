@@ -16,21 +16,21 @@ Customizable carousel to be able to slide between images, see information about 
 ## Features
 
 The parameters that can be passed to the Carousel Widget are the following:
-(double) height: Widget height.
-(bool) showPages: Defines whether or not to show a chip with the current page number and the total number of pages.
-(Color) chipColor: Defines the color of the chip that contains texts.
-(Color) arrowColor: Defines the color of the side arrows to change from one image to another.
-(Color) textColor: Defiens the color of the texts.
-(BoxFit) fit: Defines how you want to fit the image within the available space of the widget.
-(ScrollPhysics) physics: Define the type of physics you want to apply when moving between images.
-(bool) canSwipe: Defines if the screen can be swiped or if can only be moved using the side arrows buttons.
-(TextStyle?) textStyle: Defines the text format of the page number and label chips.
-(List<CarouselItem>) items: Only mandatory parameter, to which at least one instance of the CarouselItem class must be passed.
+ (double) height: Widget height.
+ (bool) showPages: Defines whether or not to show a chip with the current page number and the total number of pages.
+ (Color) chipColor: Defines the color of the chip that contains texts.
+ (Color) arrowColor: Defines the color of the side arrows to change from one image to another.
+ (Color) textColor: Defiens the color of the texts.
+ (BoxFit) fit: Defines how you want to fit the image within the available space of the widget.
+ (ScrollPhysics) physics: Define the type of physics you want to apply when moving between images.
+ (bool) canSwipe: Defines if the screen can be swiped or if can only be moved using the side arrows buttons.
+ (TextStyle?) textStyle: Defines the text format of the page number and label chips.
+ (List>CarouselItem<) items: Only mandatory parameter, to which at least one instance of the CarouselItem class must be passed.
 
 Within the CarrouselItem class you can pass the following parameters:
-(Image) image: Image to be displayed.
-(String?) label: Short description that can be added to the image.
-(VoidCallback?) onTap: Function to be performed if the displayed image is clicked.
+ (Image) image: Image to be displayed.
+ (String?) label: Short description that can be added to the image.
+ (VoidCallback?) onTap: Function to be performed if the displayed image is clicked.
 
 ## Getting started
 
@@ -38,7 +38,7 @@ Install the package using the command in the Installing section and it can now b
 
 ## Usage
 
-an example of the application can be found in the `/example` folder.
+An example of the application can be found in the `/example` folder.
 
 ```dart
 class HomePage extends StatelessWidget {
@@ -99,4 +99,4 @@ class HomePage extends StatelessWidget {
 
 ## Additional information
 
-For more information please contact me by email: gerard.ggf@gmail.com
+For more information please contact by email: gerard.ggf@gmail.com
